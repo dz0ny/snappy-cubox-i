@@ -1,0 +1,26 @@
+From cb7b2b908a0702414139c812c7fd19a048795e02 Mon Sep 17 00:00:00 2001
+From: Paolo Pisati <paolo.pisati@canonical.com>
+Date: Thu, 29 Jan 2015 14:28:11 +0100
+Subject: [PATCH] UBUNTU: [Config] snappy/snappy: RFKILL_REGULATOR depends on
+ REGULATOR=y
+
+Signed-off-by: Paolo Pisati <paolo.pisati@canonical.com>
+---
+ arch/arm/configs/snappy/snappy.config |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm/configs/snappy/snappy.config b/arch/arm/configs/snappy/snappy.config
+index 6ced4a8..687aaf6 100644
+--- a/arch/arm/configs/snappy/snappy.config
++++ b/arch/arm/configs/snappy/snappy.config
+@@ -1,6 +1,7 @@
+ CONFIG_RD_BZIP2=y
+ CONFIG_RD_LZMA=y
+ CONFIG_RD_XZ=y
++CONFIG_REGULATOR=y
+ CONFIG_RFKILL=y
+ CONFIG_RFKILL_INPUT=y
+ CONFIG_RFKILL_REGULATOR=m
+-- 
+1.7.9.5
+

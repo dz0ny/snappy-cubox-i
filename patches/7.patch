@@ -1,0 +1,26 @@
+From 35d28e36fef0a4554622c83470a6acb948035470 Mon Sep 17 00:00:00 2001
+From: Paolo Pisati <paolo.pisati@canonical.com>
+Date: Wed, 28 Jan 2015 17:32:41 +0100
+Subject: [PATCH] UBUNTU: [Config] snappy/security:
+ CC_STACKPROTECTOR_REGULAR=y
+
+Signed-off-by: Paolo Pisati <paolo.pisati@canonical.com>
+---
+ arch/arm/configs/snappy/security.config |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm/configs/snappy/security.config b/arch/arm/configs/snappy/security.config
+index 443eb5a..d69f9bc 100644
+--- a/arch/arm/configs/snappy/security.config
++++ b/arch/arm/configs/snappy/security.config
+@@ -12,6 +12,7 @@ CONFIG_DEBUG_INFO=y
+ CONFIG_SECCOMP=y
+ CONFIG_SECCOMP_FILTER=y
+ CONFIG_CC_STACKPROTECTOR=y
++CONFIG_CC_STACKPROTECTOR_REGULAR=y
+ CONFIG_DEBUG_RODATA=y
+ CONFIG_DEBUG_SET_MODULE_RONX=y
+ CONFIG_STRICT_DEVMEM=y
+-- 
+1.7.9.5
+

@@ -1,0 +1,22 @@
+From dd0d8e76becd608a21de4c9984144d9ec2446cd9 Mon Sep 17 00:00:00 2001
+From: Paolo Pisati <paolo.pisati@canonical.com>
+Date: Tue, 3 Feb 2015 11:18:46 +0000
+Subject: [PATCH] UBUNTU: [Config] snappy/generic: INPUT_UINPUT=y
+
+Signed-off-by: Paolo Pisati <paolo.pisati@canonical.com>
+---
+ arch/arm/configs/snappy/generic.config |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm/configs/snappy/generic.config b/arch/arm/configs/snappy/generic.config
+index 15f2194..a288d7f 100644
+--- a/arch/arm/configs/snappy/generic.config
++++ b/arch/arm/configs/snappy/generic.config
+@@ -31,3 +31,4 @@ CONFIG_BINFMT_SCRIPT=y
+ CONFIG_CRASH_DUMP=y
+ CONFIG_RTC_DRV_CMOS=m
+ CONFIG_NVRAM=m
++CONFIG_INPUT_UINPUT=y
+-- 
+1.7.9.5
+

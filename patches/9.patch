@@ -1,0 +1,22 @@
+From 78d9521b5e287c1ccc300008d903a9e2d9d7591c Mon Sep 17 00:00:00 2001
+From: Paolo Pisati <paolo.pisati@canonical.com>
+Date: Tue, 3 Feb 2015 11:04:08 +0000
+Subject: [PATCH] UBUNTU: [Config] snappy/generic: CRASH_DUMP=y
+
+Signed-off-by: Paolo Pisati <paolo.pisati@canonical.com>
+---
+ arch/arm/configs/snappy/generic.config |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm/configs/snappy/generic.config b/arch/arm/configs/snappy/generic.config
+index 7ac8327..e954d72 100644
+--- a/arch/arm/configs/snappy/generic.config
++++ b/arch/arm/configs/snappy/generic.config
+@@ -28,3 +28,4 @@ CONFIG_BINFMT_SCRIPT=y
+ # fall back.
+ # See LP:1398458
+ # CONFIG_FW_LOADER_USER_HELPER_FALLBACK is not set
++CONFIG_CRASH_DUMP=y
+-- 
+1.7.9.5
+

@@ -1,0 +1,25 @@
+From 2397f31f6811158a7402ee8b13cc349f0f1a9586 Mon Sep 17 00:00:00 2001
+From: Paolo Pisati <paolo.pisati@canonical.com>
+Date: Tue, 3 Feb 2015 14:14:30 +0100
+Subject: [PATCH] UBUNTU: [Config] snappy/generic: SYSVIPC=y &&
+ SYSVIPC_SYSCTL=y
+
+Signed-off-by: Paolo Pisati <paolo.pisati@canonical.com>
+---
+ arch/arm/configs/snappy/generic.config |    3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/arm/configs/snappy/generic.config b/arch/arm/configs/snappy/generic.config
+index a288d7f..fa258fb 100644
+--- a/arch/arm/configs/snappy/generic.config
++++ b/arch/arm/configs/snappy/generic.config
+@@ -32,3 +32,6 @@ CONFIG_CRASH_DUMP=y
+ CONFIG_RTC_DRV_CMOS=m
+ CONFIG_NVRAM=m
+ CONFIG_INPUT_UINPUT=y
++# needed by dbus
++CONFIG_SYSVIPC=y
++CONFIG_SYSVIPC_SYSCTL=y
+-- 
+1.7.9.5
+

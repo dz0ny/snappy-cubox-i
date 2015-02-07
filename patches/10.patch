@@ -1,0 +1,23 @@
+From a55a83e050916583a53027d60ab2460ff0756c9a Mon Sep 17 00:00:00 2001
+From: Paolo Pisati <paolo.pisati@canonical.com>
+Date: Tue, 3 Feb 2015 11:13:52 +0000
+Subject: [PATCH] UBUNTU: [Config] snappy/generic: NVRAM=m
+
+Signed-off-by: Paolo Pisati <paolo.pisati@canonical.com>
+---
+ arch/arm/configs/snappy/generic.config |    2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/arch/arm/configs/snappy/generic.config b/arch/arm/configs/snappy/generic.config
+index e954d72..15f2194 100644
+--- a/arch/arm/configs/snappy/generic.config
++++ b/arch/arm/configs/snappy/generic.config
+@@ -29,3 +29,5 @@ CONFIG_BINFMT_SCRIPT=y
+ # See LP:1398458
+ # CONFIG_FW_LOADER_USER_HELPER_FALLBACK is not set
+ CONFIG_CRASH_DUMP=y
++CONFIG_RTC_DRV_CMOS=m
++CONFIG_NVRAM=m
+-- 
+1.7.9.5
+

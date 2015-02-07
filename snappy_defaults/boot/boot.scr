@@ -1,0 +1,29 @@
+# Load uEnv.txt
+if run loadbootenv; then 
+  run importbootenv;
+fi;
+
+echo "Loading snappy config";
+run uenvcmd;
+
+if test "${snappy_mode}" = "try"; then
+  if test -e mmc ${bootpart} ${snappy_stamp}; then
+    if test "${snappy_ab}" = "a"; then 
+      setenv snappy_ab "b"; 
+    else 
+      setenv snappy_ab "a"; 
+    fi;
+  else
+    fatwrite mmc ${mmcdev}:${mmcpart} 0x0 ${snappy_stamp} 0;
+  fi;
+fi;
+
+# Boostrap device binary tree, kernel and raw initrd
+run autodetectfdt;
+load mmc ${mmcdev}:${mmcpart} ${fdt_addr} ${snappy_ab}/${fdt_file};
+load mmc ${mmcdev}:${mmcpart} ${loadaddr} ${snappy_ab}/${kernel_file};
+load mmc ${mmcdev}:${mmcpart} ${initrd_addr} ${snappy_ab}/${initrd_file}; setenv initrd_size ${filesize};
+
+setenv mmcroot /dev/disk/by-label/system-${snappy_ab} ${snappy_cmdline};
+run mmcargs;
+bootz ${loadaddr} ${initrd_addr}:${initrd_size} ${fdtaddr};

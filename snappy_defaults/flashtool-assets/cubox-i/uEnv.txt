@@ -1,5 +1,5 @@
-# where to load initrd
-initrd_addr=0x88080000
-# load Snappy environment and call into Snappy boot after processing this file
-uenvcmd=load mmc ${bootpart} ${loadaddr} snappy-system.txt; env import -t $loadaddr $filesize; run snappy_boot
+# Set default bootargs
+mmcargs=setenv bootargs console=tty1 console=ttymxc0,115200 consoleblank=0 video=mxcfb0:dev=hdmi,1280x720M@60,if=RGB24,bpp=16 dmfc=3 ahci_imx.hotplug=1 pci=nomsi loop.max_part=15
 
+# load Snappy script to pointer and import script to env
+uenvcmd=load mmc ${mmcdev}:${mmcpart} ${loadaddr} snappy-system.txt; env import -t $loadaddr $filesize

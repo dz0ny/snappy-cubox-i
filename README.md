@@ -14,7 +14,7 @@ bash build_dep.sh
 bash bake.sh
 ```
 
-3. Create flashable image
+3. Create image
 
 ```
 sudo ubuntu-device-flash core \

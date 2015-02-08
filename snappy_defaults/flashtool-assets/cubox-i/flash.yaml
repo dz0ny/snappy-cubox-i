@@ -1,4 +1,4 @@
 bootloader:
-    - dd if=%s/SPL of=%s bs=1K seek=1
-    - dd if=%s/u-boot.img of=%s bs=1K seek=42
+    - dd if=%s/SPL of=%s bs=1K seek=1 conv=notrunc
+    - dd if=%s/u-boot.img of=%s bs=1K seek=42 conv=notrunc
 

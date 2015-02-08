@@ -1,0 +1,19 @@
+commit a60bfd93559455e3749c16e2881ec225bb6df319
+Author: Janez Troha <dz0ny@ubuntu.si>
+Date:   Sat Feb 7 23:10:04 2015 +0100
+
+    Add missing address for source command
+
+diff --git a/include/configs/mx6_cubox-i.h b/include/configs/mx6_cubox-i.h
+index ba2144a..304a113 100644
+--- a/include/configs/mx6_cubox-i.h
++++ b/include/configs/mx6_cubox-i.h
+@@ -191,7 +191,7 @@
+         "loadbootscript=" \
+                 "load mmc ${mmcdev}:${mmcpart} ${loadaddr} ${file_prefix}${script};\0" \
+         "bootscript=echo Running bootscript from mmc ...; " \
+-                "source;\0" \
++                "source ${loadaddr};\0" \
+         "autodetectfdt=if test ${cpu} = 6SOLO || test ${cpu} = 6DL; then " \
+                         "setenv fdt_prefix imx6dl; " \
+                 "else " \

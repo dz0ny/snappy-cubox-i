@@ -1,0 +1,20 @@
+commit 4747da600943f7c6086ec053cdd623c256135d0d
+Author: Janez Troha <dz0ny@ubuntu.si>
+Date:   Sat Feb 7 23:52:28 2015 +0100
+
+    Add support for fatwrite command
+
+diff --git a/include/configs/mx6_cubox-i.h b/include/configs/mx6_cubox-i.h
+index 304a113..8de47bb 100644
+--- a/include/configs/mx6_cubox-i.h
++++ b/include/configs/mx6_cubox-i.h
+@@ -316,7 +316,8 @@
+ #define CONFIG_SYS_LONGHELP
+ #define CONFIG_SYS_HUSH_PARSER
+ #define CONFIG_SUPPORT_RAW_INITRD
+-
++#define CONFIG_FAT_WRITE
++     
+ #ifndef __ASSEMBLY__
+ extern char *config_sys_prompt;
+ #endif

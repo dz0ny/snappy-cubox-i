@@ -11,8 +11,7 @@ export CROSS_COMPILE=arm-linux-gnueabihf-
 cd kernel
 touch .scmversion
 if [ ! -f ".config" ]; then
-	# make imx_v7_cbi_hb_defconfig
-	cp ../kernel.config .config
+	make imx_v7_cbi_hb_defconfig
 	scripts/kconfig/merge_config.sh .config arch/arm/configs/snappy/*.config
 fi
 

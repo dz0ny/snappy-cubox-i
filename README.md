@@ -20,7 +20,7 @@ bash bake.sh
 sudo ubuntu-device-flash core \
     -o cubox-snappy.img \
     --size 4 \
-    --channel ubuntu-core/devel-proposed \
+    --channel ubuntu-core/devel \
     --device generic_armhf \
     --platform cubox-i \
     --enable-ssh \

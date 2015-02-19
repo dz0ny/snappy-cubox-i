@@ -24,5 +24,5 @@ sudo ubuntu-device-flash core \
     --device generic_armhf \
     --platform cubox-i \
     --enable-ssh \
-    --device-part=./device.tar.xz \
+    --device-part=./device.tar.xz
 ```

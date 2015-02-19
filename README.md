@@ -25,5 +25,4 @@ sudo ubuntu-device-flash core \
     --platform cubox-i \
     --enable-ssh \
     --device-part=./device.tar.xz \
-    --developer-mode
 ```
